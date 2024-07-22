@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Student Registration Form</h1>
+        <form id="studentForm" method="POST" action="crud.php">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required>
+
+            <button type="submit" name="action" value="create">Submit</button>
+        </form>
+
+        <h2>Registered Students</h2>
+        <div id="studentList">
+            <?php include 'crud.php'; ?>
+        </div>
+    </div>
+</body>
+</html>
